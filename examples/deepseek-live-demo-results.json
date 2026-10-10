@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "provenance": "Saved outputs from two synthetic DeepSeek calls accepted on 2026-09-24; replay, not a new API call.",
+  "cases": [
+    {
+      "gaps": [
+        "个人本地项目，未公开部署，无真实招聘客户或大规模线上用户。",
+        "尚未进行真实用户验证。"
+      ],
+      "candidates": [
+        {
+          "focus": "AI 工具与自动化开发",
+          "bullets": [
+            {
+              "text": "针对岗位批量处理场景，独立实现批量导入、重复识别与人工确认流程，使用 React、FastAPI 和 SQLite 完成前后端及本地数据存储。",
+              "fact_ids": [
+                "project-resume-tailor/completed_features/0",
+                "project-resume-tailor/completed_features/2"
+              ],
+              "facts": [
+                "实现岗位批量导入、重复识别和人工确认流程。",
+                "使用 React、FastAPI 和 SQLite 实现前端页面、后端接口与本地数据存储。"
+              ],
+              "jd_evidence": "负责批量数据处理、重复识别、定时任务和结果验证。",
+              "reason": "直接对应 JD 中的批量数据处理和重复识别需求，并体现独立完成与全栈实现能力。"
+            },
+            {
+              "text": "设计并实现可设置频率、暂停状态和单次上限的定时采集流程，满足自动化任务的可控调度需求。",
+              "fact_ids": [
+                "project-resume-tailor/completed_features/1"
+              ],
+              "facts": [
+                "实现可设置频率、暂停状态和单次上限的定时采集流程。"
+              ],
+              "jd_evidence": "负责批量数据处理、重复识别、定时任务和结果验证。",
+              "reason": "突出定时任务实现能力，与 JD 自动化流程要求匹配。"
+            },
+            {
+              "text": "使用 Codex 辅助需求拆分、代码修改与验证，并通过后端自动化测试和前端构建检查保障修改质量。",
+              "fact_ids": [
+                "project-resume-tailor/technology_and_ai_tools/0",
+                "project-resume-tailor/debugging_methods/0"
+              ],
+              "facts": [
+                "Codex：辅助拆分需求、修改代码和运行验证",
+                "使用后端自动化测试和前端构建检查验证修改。"
+              ],
+              "jd_evidence": "使用 AI 编程工具开发内部小工具和自动化流程。",
+              "reason": "体现 AI 编程工具的实际使用和结果验证，贴合岗位核心工具要求。"
+            }
+          ]
+        },
+        {
+          "focus": "自动化流程与数据验证",
+          "bullets": [
+            {
+              "text": "实现定时采集流程，支持频率设置、暂停状态和单次上限，确保自动化任务按需执行。",
+              "fact_ids": [
+                "project-resume-tailor/completed_features/1"
+              ],
+              "facts": [
+                "实现可设置频率、暂停状态和单次上限的定时采集流程。"
+              ],
+              "jd_evidence": "负责批量数据处理、重复识别、定时任务和结果验证。",
+              "reason": "侧重定时任务的配置与控制，展示自动化流程的完整设计。"
+            },
+            {
+              "text": "通过后端自动化测试和前端构建检查验证修改，降低变更风险并保证流程可靠性。",
+              "fact_ids": [
+                "project-resume-tailor/debugging_methods/0"
+              ],
+              "facts": [
+                "使用后端自动化测试和前端构建检查验证修改。"
+              ],
+              "jd_evidence": "负责批量数据处理、重复识别、定时任务和结果验证。",
+              "reason": "强调结果验证环节，与 JD 中对验证的要求直接对应。"
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 712,
+        "completion_tokens": 685,
+        "total_tokens": 1397
+      },
+      "model": "deepseek-flash",
+      "id": "tool-automation",
+      "risks": [
+        "需确认项目是否已完成全部开发，避免将未完成功能表述为已实现。",
+        "避免过度强调“AI 工具”使用范围，仅限 Codex 辅助需求拆分、代码修改与运行验证。"
+      ]
+    },
+    {
+      "gaps": [
+        "尚未完成公开部署与真实用户验证",
+        "个人本地项目，无真实招聘客户或大规模线上用户"
+      ],
+      "candidates": [
+        {
+          "focus": "快速独立交付可运行产品",
+          "bullets": [
+            {
+              "text": "作为个人项目独立完成 AI 简历适配工作台，使用 React、FastAPI 和 SQLite 实现前端页面、后端接口与本地数据存储，并借助 Codex 辅助拆分需求、修改代码和运行验证，将想法快速落地为可运行产品。",
+              "fact_ids": [
+                "project-resume-tailor/completed_features/2",
+                "project-resume-tailor/technology_and_ai_tools/0"
+              ],
+              "facts": [
+                "使用 React、FastAPI 和 SQLite 实现前端页面、后端接口与本地数据存储。",
+                "Codex：辅助拆分需求、修改代码和运行验证"
+              ],
+              "jd_evidence": "使用 AI Coding 工具把想法快速做成可运行产品。独立完成前端页面、后端接口、本地数据存储、调试和导出功能。",
+              "reason": "突出独立全栈实现和 AI 工具使用，直接匹配岗位对快速交付可运行产品的要求。"
+            },
+            {
+              "text": "通过后端自动化测试和前端构建检查验证功能修改，确保批量导入、定时采集等流程在本地环境稳定运行。",
+              "fact_ids": [
+                "project-resume-tailor/debugging_methods/0",
+                "project-resume-tailor/completed_features/0",
+                "project-resume-tailor/completed_features/1"
+              ],
+              "facts": [
+                "使用后端自动化测试和前端构建检查验证修改。",
+                "实现岗位批量导入、重复识别和人工确认流程。",
+                "实现可设置频率、暂停状态和单次上限的定时采集流程。"
+              ],
+              "jd_evidence": "调试和导出功能",
+              "reason": "强调调试能力，并以具体验证方式佐证。"
+            },
+            {
+              "text": "实现岗位级草稿编辑以及 Word 和 PDF 导出，覆盖从数据编辑到文件导出的完整产品闭环。",
+              "fact_ids": [
+                "project-resume-tailor/completed_features/3"
+              ],
+              "facts": [
+                "实现岗位级草稿编辑以及 Word 和 PDF 导出。"
+              ],
+              "jd_evidence": "导出功能",
+              "reason": "直接对应岗位描述中的导出功能要求。"
+            }
+          ]
+        },
+        {
+          "focus": "AI 辅助开发中的全栈实现与流程设计",
+          "bullets": [
+            {
+              "text": "独立负责 AI 简历适配工作台的需求拆解与前后端实现，使用 React、FastAPI 和 SQLite 搭建本地全栈应用，并引入 Codex 辅助代码修改与验证。",
+              "fact_ids": [
+                "project-resume-tailor/completed_features/2",
+                "project-resume-tailor/technology_and_ai_tools/0"
+              ],
+              "facts": [
+                "使用 React、FastAPI 和 SQLite 实现前端页面、后端接口与本地数据存储。",
+                "Codex：辅助拆分需求、修改代码和运行验证"
+              ],
+              "jd_evidence": "使用 AI Coding 工具把想法快速做成可运行产品。独立完成前端页面、后端接口、本地数据存储",
+              "reason": "侧重 AI 辅助开发与全栈技术栈的结合，体现独立交付能力。"
+            },
+            {
+              "text": "设计并实现可设置频率、暂停状态和单次上限的定时采集流程，以及岗位批量导入、重复识别与人工确认流程，展示对业务闭环的独立拆解能力。",
+              "fact_ids": [
+                "project-resume-tailor/completed_features/1",
+                "project-resume-tailor/completed_features/0"
+              ],
+              "facts": [
+                "实现可设置频率、暂停状态和单次上限的定时采集流程。",
+                "实现岗位批量导入、重复识别和人工确认流程。"
+              ],
+              "jd_evidence": "把想法快速做成可运行产品",
+              "reason": "突出需求拆解和流程设计，证明能将想法转化为可运行逻辑。"
+            },
+            {
+              "text": "通过后端自动化测试和前端构建检查验证修改，保障本地数据存储、调试与导出功能的质量。",
+              "fact_ids": [
+                "project-resume-tailor/debugging_methods/0",
+                "project-resume-tailor/completed_features/2",
+                "project-resume-tailor/completed_features/3"
+              ],
+              "facts": [
+                "使用后端自动化测试和前端构建检查验证修改。",
+                "使用 React、FastAPI 和 SQLite 实现前端页面、后端接口与本地数据存储。",
+                "实现岗位级草稿编辑以及 Word 和 PDF 导出。"
+              ],
+              "jd_evidence": "调试和导出功能",
+              "reason": "将调试、导出与数据存储关联，强调全流程质量意识。"
+            }
+          ]
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 718,
+        "completion_tokens": 882,
+        "total_tokens": 1600
+      },
+      "model": "deepseek-flash",
+      "id": "vibe-fullstack",
+      "risks": [
+        "不能将项目描述为已有真实招聘客户或大规模线上用户",
+        "不能声称已公开部署或已有真实用户验证"
+      ]
+    }
+  ]
+}

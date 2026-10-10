@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "suite_id": "deepseek-agent-demo-v1",
+  "description": "公开可用的脱敏合成案例，不包含真实公司、真实 JD、个人身份或私有简历。",
+  "project": {
+    "project_id": "project-resume-tailor",
+    "project_name": "AI 简历适配工作台",
+    "project_type": "个人项目",
+    "ownership": "独立完成",
+    "ownership_note": "负责需求拆解、前后端实现与测试。",
+    "fact_status": "confirmed",
+    "updated_at": "2026-09-24",
+    "completed_features": [
+      {"content": "实现岗位批量导入、重复识别和人工确认流程。", "evidence_status": "已验证"},
+      {"content": "实现可设置频率、暂停状态和单次上限的定时采集流程。", "evidence_status": "已验证"},
+      {"content": "使用 React、FastAPI 和 SQLite 实现前端页面、后端接口与本地数据存储。", "evidence_status": "已验证"},
+      {"content": "实现岗位级草稿编辑以及 Word 和 PDF 导出。", "evidence_status": "已验证"}
+    ],
+    "technology_and_ai_tools": [
+      {"name": "Codex", "usage": "辅助拆分需求、修改代码和运行验证", "level": "实际使用", "evidence_status": "已验证"}
+    ],
+    "debugging_methods": [
+      {"content": "使用后端自动化测试和前端构建检查验证修改。", "evidence_status": "已验证"}
+    ],
+    "errors_and_failures": [],
+    "do_not_exaggerate": [
+      {"content": "这是个人本地项目，不能写成已有真实招聘客户或大规模线上用户。", "evidence_status": "禁止写入简历"}
+    ],
+    "completion": {
+      "completed_scope": [],
+      "remaining_scope": [
+        {"content": "公开部署与真实用户验证", "evidence_status": "计划实现"}
+      ]
+    }
+  },
+  "resume": {
+    "status": "ready",
+    "sections": {
+      "个人简介": ["脱敏候选人", "邮箱：example@example.com"],
+      "教育背景": ["示例大学｜示例专业"],
+      "工作经历": ["示例公司｜示例职位"],
+      "项目经历": ["AI 简历适配工作台｜个人项目"]
+    }
+  },
+  "cases": [
+    {
+      "id": "tool-automation",
+      "title": "AI 工具与自动化专员",
+      "jd": "使用 AI 编程工具开发内部小工具和自动化流程。负责批量数据处理、重复识别、定时任务和结果验证。",
+      "expected_focus": "工具自动化侧重点",
+      "expected_terms": ["批量导入", "定时采集"],
+      "forbidden_terms": ["真实招聘客户", "大规模线上用户"],
+      "output": {
+        "focus": "工具自动化侧重点",
+        "bullets": [
+          {
+            "text": "实现岗位批量导入、重复识别和人工确认流程。",
+            "fact_slot": "completed_features/0",
+            "jd_evidence": "批量数据处理、重复识别",
+            "reason": "对应岗位对批量处理和重复识别的要求。"
+          },
+          {
+            "text": "实现可设置频率、暂停状态和单次上限的定时采集流程。",
+            "fact_slot": "completed_features/1",
+            "jd_evidence": "定时任务和结果验证",
+            "reason": "突出自动化任务的控制与交付过程。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "vibe-fullstack",
+      "title": "Vibe Coding 全栈工程师",
+      "jd": "使用 AI Coding 工具把想法快速做成可运行产品。独立完成前端页面、后端接口、本地数据存储、调试和导出功能。",
+      "expected_focus": "Vibe Coding 全栈侧重点",
+      "expected_terms": ["React", "岗位级草稿编辑"],
+      "forbidden_terms": ["真实招聘客户", "大规模线上用户"],
+      "output": {
+        "focus": "Vibe Coding 全栈侧重点",
+        "bullets": [
+          {
+            "text": "使用 React、FastAPI 和 SQLite 实现前端页面、后端接口与本地数据存储。",
+            "fact_slot": "completed_features/2",
+            "jd_evidence": "前端页面、后端接口、本地数据存储",
+            "reason": "对应岗位要求的基础全栈开发闭环。"
+          },
+          {
+            "text": "实现岗位级草稿编辑以及 Word 和 PDF 导出。",
+            "fact_slot": "completed_features/3",
+            "jd_evidence": "调试和导出功能",
+            "reason": "突出从可编辑功能到可交付文件的产品闭环。"
+          }
+        ]
+      }
+    }
+  ]
+}

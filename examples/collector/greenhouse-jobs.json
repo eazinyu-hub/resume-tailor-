@@ -1,0 +1,17 @@
+{
+  "jobs": [
+    {
+      "id": 10001,
+      "title": "AI Application Engineer",
+      "updated_at": "2026-09-10T08:30:00Z",
+      "location": {
+        "name": "Remote"
+      },
+      "absolute_url": "https://boards.greenhouse.io/example/jobs/10001",
+      "content": "<h2>Responsibilities</h2><p>Build internal AI tools and automation workflows.</p><h2>Requirements</h2><ul><li>Experience with Python and APIs.</li><li>Ability to debug and validate generated code.</li></ul>"
+    }
+  ],
+  "meta": {
+    "total": 1
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "suite_id": "analysis-regression-v1",
+  "description": "脱敏合成案例，只保留曾经出现过的错误结构，不包含真实 JD、简历或个人数据。",
+  "classification_cases": [
+    {
+      "id": "classification-product-title-over-agent-example",
+      "bug": "产品岗位正文提到 Agent 时曾被误分为 Agent 开发",
+      "title": "AI 产品经理",
+      "jd": "负责梳理 Agent 场景，设计产品体验并分析用户反馈。",
+      "expected_family": "ai_product_operations"
+    },
+    {
+      "id": "classification-agent-product-intern",
+      "bug": "Agent 产品岗位不能因为标题中的 Agent 被分到开发",
+      "title": "Agent 产品实习生",
+      "jd": "负责消费者研究、产品规划与竞品分析。",
+      "expected_family": "ai_product_operations"
+    },
+    {
+      "id": "classification-context-engineer",
+      "bug": "上下文工程师曾因旧规则无命中而默认进入全栈",
+      "title": "上下文工程师",
+      "jd": "负责 Prompt 设计、评测与调优。",
+      "expected_family": "agent_application"
+    },
+    {
+      "id": "classification-coding-agent-core",
+      "bug": "AI Coding 岗位的核心职责是 Agent 推理循环时应归入 Agent 开发",
+      "title": "AI Coding 开发工程师",
+      "jd": "参与 Coding Agent 核心推理与行动循环的设计与实现。",
+      "expected_family": "agent_application"
+    },
+    {
+      "id": "classification-vibe-space",
+      "bug": "Vibe Coding 中间有空格时曾因正则转义错误而漏判",
+      "title": "Vibe Coding 工程师",
+      "jd": "独立开发 Web 工具并完成验证。",
+      "expected_family": "vibe_coding_fullstack"
+    },
+    {
+      "id": "classification-no-default-fullstack",
+      "bug": "无法判断方向的岗位不能默认归入全栈",
+      "title": "普通项目助理",
+      "jd": "负责日常项目事项。",
+      "expected_family": "unclassified"
+    }
+  ],
+  "requirement_cases": [
+    {
+      "id": "requirements-negation-and-bonus",
+      "bug": "无需经验不应成为缺口，加分项不应升级为硬要求",
+      "jd": "任职要求：无需 Python 经验。使用自动化处理数据。加分项：有 MCP Server 和 Dify 经验。",
+      "expected": [
+        {"name": "工具与自动化", "kind": "任职要求"},
+        {"name": "MCP", "kind": "加分项"},
+        {"name": "Dify", "kind": "加分项"}
+      ],
+      "absent": ["Python", "计算机/AI相关专业"]
+    }
+  ],
+  "alternative_cases": [
+    {
+      "id": "alternatives-one-programming-language",
+      "bug": "至少会一种语言曾被拆成多项缺口",
+      "jd": "任职要求：接触过至少一种编程语言，例如 Python、Java、JavaScript、C 或 C++。",
+      "expected_requirement": "编程语言（至少 1 种）",
+      "minimum_options": 1,
+      "expected_options": ["Python", "JavaScript", "Java", "C++", "C"]
+    },
+    {
+      "id": "alternatives-two-ai-tools",
+      "bug": "至少两种 AI 工具不能命中一种就算全部满足",
+      "jd": "任职要求：熟练使用至少2种AI编程工具，例如 Codex、Cursor、Claude Code。",
+      "expected_requirement": "AI 工具（至少 2 种）",
+      "minimum_options": 2,
+      "expected_options": ["Codex", "Claude Code", "Cursor"]
+    }
+  ],
+  "fact_boundary_cases": [
+    {
+      "id": "facts-classification-label-is-not-implementation",
+      "bug": "支持 Agent 岗位分类曾被当成实现 Agent 的证据",
+      "jd_title": "Agent 开发工程师",
+      "jd": "任职要求：使用 Python 开发 Agent。",
+      "card": {
+        "project_id": "fixture-project",
+        "project_name": "脱敏示例项目",
+        "fact_status": "confirmed",
+        "completed_features": [
+          {"content": "实现岗位方向建议，支持 Agent 应用、Python 开发等岗位分类。", "evidence_status": "已验证"},
+          {"content": "统计 Python 等岗位关键词频率。", "evidence_status": "已验证"}
+        ]
+      },
+      "expected_supported": [],
+      "expected_not_allowed": ["Python", "AI/Agent 开发"]
+    },
+    {
+      "id": "facts-plan-and-prohibition-are-not-complete",
+      "bug": "计划、禁止项和问题背景不能因为命中关键词就变成已完成能力",
+      "jd_title": "Agent 工程师",
+      "jd": "任职要求：使用 Cursor，开发 RAG、MCP 并完成部署。",
+      "card": {
+        "project_id": "fixture-project",
+        "project_name": "脱敏示例项目",
+        "fact_status": "confirmed",
+        "real_problem": [
+          {"content": "希望匹配 RAG 岗位。", "evidence_status": "已验证"}
+        ],
+        "technology_and_ai_tools": [
+          {"name": "Cursor", "usage": "未实际使用", "level": "未实际使用", "evidence_status": "禁止写入简历"}
+        ],
+        "completion": {
+          "remaining_scope": [
+            {"content": "计划实现 MCP 和公网部署。", "evidence_status": "计划实现"}
+          ]
+        },
+        "do_not_exaggerate": [
+          {"content": "禁止写成已部署。", "evidence_status": "禁止写入简历"}
+        ]
+      },
+      "expected_supported": [],
+      "expected_not_allowed": ["Cursor", "RAG", "MCP", "部署上线"]
+    }
+  ],
+  "similarity_cases": [
+    {
+      "id": "similarity-no-family-only-or-self-duplicate",
+      "bug": "仅同方向不能凑进相似岗位，当前 JD 的重复正文也不能成为参考",
+      "target": {"id": 1, "title": "全栈工程师", "jd": "使用 Python、React 进行前端开发。"},
+      "candidates": [
+        {"id": 2, "title": "全栈工程师", "jd": "负责品牌活动执行。"},
+        {"id": 3, "title": "另一个标题", "jd": "使用 Python、React 进行前端开发。"},
+        {"id": 4, "title": "全栈工程师", "jd": "使用 Python、React 进行前端开发及测试。"}
+      ],
+      "expected_ids": [4],
+      "excluded_ids": [1, 2, 3]
+    }
+  ]
+}

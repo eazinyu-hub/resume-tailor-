@@ -1,0 +1,21 @@
+{
+  "project_id": "project-resume-tailor",
+  "project_name": "AI 简历适配工作台",
+  "project_type": "个人项目",
+  "ownership": "待填写",
+  "ownership_note": "请填写自己实际负责的内容",
+  "fact_status": "draft",
+  "real_problem": [],
+  "completed_features": [],
+  "technology_and_ai_tools": [],
+  "errors_and_failures": [],
+  "debugging_methods": [],
+  "do_not_exaggerate": [],
+  "completion": {
+    "status": "待核对",
+    "completed_scope": [],
+    "remaining_scope": [],
+    "last_verified_at": "待核对"
+  },
+  "evidence": []
+}
