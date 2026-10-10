@@ -2,7 +2,9 @@
 
 ## 已录制视频
 
-[2 分 20 秒中文字幕演示](demo/resume-tailor-demo.mp4)，无配音。
+[下载 2 分 20 秒中文字幕演示（MP4，约 6.8 MB）](https://github.com/eazinyu-hub/resume-tailor-/raw/refs/heads/main/docs/demo/resume-tailor-demo.mp4)，无配音。下载后使用本机视频播放器打开，无需安装项目或配置 API Key。
+
+如果浏览器直接播放，可右键“视频另存为”。备用入口：[视频文件页面](demo/resume-tailor-demo.mp4)，点击右上角 **Download raw file（下载）** 按钮；也可以下载仓库 ZIP，在 `docs/demo/resume-tailor-demo.mp4` 中查看。不要把文件页面不能预览误认为视频缺失。
 
 录制日期：2026-10-10。使用两条合成岗位、示例简历和同一张合成事实卡。模型候选来自 2026-09-24 两次真实调用的已验收输出，视频全程标注回放；本次不调用 API。保存、岗位隔离、重新读取草稿和 Word/PDF 导出均经过实际后端处理。最后的并排对照是录屏注释层，不是应用已有功能。
 

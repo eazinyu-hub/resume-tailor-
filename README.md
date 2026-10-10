@@ -8,7 +8,15 @@
 
 ![同一项目面对两个岗位的表达对照](docs/demo/two-job-comparison.png)
 
-[观看 2 分 20 秒中文字幕演示](docs/demo/resume-tailor-demo.mp4)：真实页面、确认保存和文件导出，使用此前验收过的合成模型结果回放，本次录制未调用 API。
+## 演示视频：下载后播放
+
+[下载 2 分 20 秒中文字幕演示（MP4，约 6.8 MB）](https://github.com/eazinyu-hub/resume-tailor-/raw/refs/heads/main/docs/demo/resume-tailor-demo.mp4)
+
+点击上面的链接下载，用本机视频播放器打开即可；无需安装项目或配置 API Key。若浏览器直接播放，也可以右键“视频另存为”。
+
+备用方式：打开[视频文件页面](docs/demo/resume-tailor-demo.mp4)，点击右上角 **Download raw file（下载）** 按钮。下载整个仓库 ZIP 后，也能在 `docs/demo/resume-tailor-demo.mp4` 找到同一视频。
+
+演示包含真实页面、确认保存和文件导出，使用此前验收过的合成模型结果回放，本次录制未调用 API。[查看演示范围与复现说明](docs/demo-guide.md)。
 
 ## 当前能力
 
